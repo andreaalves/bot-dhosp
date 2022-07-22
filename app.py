@@ -12,7 +12,6 @@ from flask import request
 # Flask app should start in global layout
 app = Flask(__name__)
 
-
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -82,7 +81,6 @@ def makeWebhookResult(req):
         # "contextOut": [],
         "source": "apiai-onlinestore-shipping"
     }
-
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
